@@ -9,12 +9,12 @@ repositories {
     publicRepos()
 }
 
-val v = libs.versions.asoft.get()
+val v = libs.versions.pitwo.get()
 
 group = "com.picortex"
 version = v
 
 allprojects {
-    group = "tz.co.asoft"
+    group = "com.picortex"
     version = v
 }

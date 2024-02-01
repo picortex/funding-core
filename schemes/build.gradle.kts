@@ -12,6 +12,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(projects.fundingDtos)
+                api(libs.koncurrent.later.core)
             }
         }
 
