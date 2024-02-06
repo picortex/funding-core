@@ -1,4 +1,5 @@
 @file:JsExport
+
 package funding
 
 import kotlinx.JsExport
@@ -10,6 +11,7 @@ enum class Type(val label: String) {
     Debt("Pure Debt"),
     Equity("Pure Equity"),
     DebtAndEquity("A Combination of Debt and Equity"),
+    ConvertibleNote("Convertible Note"),
     Mezzanine("Mezzanine type instruments"),
     PurchaseOrderFinancing("Purchase Order Financing"),
     WorkingCapitalSolutions("Working Capital Solutions"),
