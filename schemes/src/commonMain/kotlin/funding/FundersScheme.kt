@@ -15,4 +15,6 @@ interface FundersScheme {
     fun load(uid: String): Later<Funder>
 
     fun update(funder: Funder): Later<Funder>
+
+    fun remove(uid: String): Later<Funder>
 }
