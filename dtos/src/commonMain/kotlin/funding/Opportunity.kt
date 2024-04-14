@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 data class Opportunity(
     val uid: String,
     val name: String,
-    val investor: String,
+    val funder: Funder,
     val logo: String,
     val details: String,
     val criteria: Section,

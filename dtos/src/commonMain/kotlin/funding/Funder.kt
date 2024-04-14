@@ -9,5 +9,6 @@ import kotlinx.serialization.Serializable
 data class Funder(
     val uid: String,
     val name: String,
+    val email: String,
     val logo: String? = null,
 )

@@ -13,7 +13,7 @@ import kotlinx.JsName
 import kronecker.LoadOptions
 
 interface FundersScheme {
-    fun create(name: String): Later<Funder>
+    fun create(params: FunderParams): Later<Funder>
 
     fun list(options: LoadOptions = LoadOptions()): Later<List<Funder>>
 
