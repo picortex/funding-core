@@ -16,7 +16,7 @@ class FundingReference(
             update = { "Updating $entity" },
         )
 
-        fun endpoint(base: String,entity: String) = FundingReference(
+        fun endpoint(base: String, entity: String) = FundingReference(
             create = { "$base/$entity" },
             load = { uid -> "$base/$entity/$uid" },
             remove = { uid -> "$base/$entity/$uid" },
