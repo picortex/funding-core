@@ -7,7 +7,7 @@ class FundingReference(
     val list: () -> String,
     val update: () -> String,
 ) {
-    internal companion object {
+    companion object {
         fun messages(entity: String) = FundingReference(
             create = { "Creating a new $entity" },
             load = { uid -> "Loading $entity with uid=$uid" },

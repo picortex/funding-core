@@ -19,7 +19,7 @@ listOf(
     "cinematic", "keep", "lexi", "captain", "neat",
     "kash-api", "geo-api", "geo-client",
     "kronecker", "epsilon-api", "krono-core", "identifier-api",
-    "kollections", "koncurrent", "kommander",
+    "kollections", "koncurrent", "kommander", "flame-core"
 ).forEach { includeBuild("../$it") }
 
 rootProject.name = "funding-core"

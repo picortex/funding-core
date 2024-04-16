@@ -13,6 +13,7 @@ kotlin {
             dependencies {
                 api(libs.krono.api)
                 api(libs.kronecker.core)
+                api(libs.flame.dtos.smes)
             }
         }
 
