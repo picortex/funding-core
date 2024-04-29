@@ -6,5 +6,5 @@ import koncurrent.Later
 import kotlinx.JsExport
 
 interface MonApplicationScheme : ApplicationScheme {
-    fun reject(uid: String): Later<Application>
+    fun reject(uid: String): Later<ApplicationDto>
 }

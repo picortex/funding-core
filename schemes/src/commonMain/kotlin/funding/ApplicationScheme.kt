@@ -8,7 +8,7 @@ import kotlinx.JsExport
 import kronecker.LoadOptions
 
 interface ApplicationScheme {
-    fun list(options: LoadOptions = LoadOptions()): Later<List<Application>>
-    fun load(uid: String): Later<Application>
-    fun remove(uid: String): Later<Application>
+    fun list(options: LoadOptions = LoadOptions()): Later<List<ApplicationDto>>
+    fun load(uid: String): Later<ApplicationDto>
+    fun remove(uid: String): Later<ApplicationDto>
 }
