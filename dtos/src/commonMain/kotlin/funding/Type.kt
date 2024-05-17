@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 enum class Type(val label: String) {
-    Grand("Grant"),
+    Grant("Grant"),
     Debt("Pure Debt"),
     Equity("Pure Equity"),
     DebtAndEquity("A Combination of Debt and Equity"),
