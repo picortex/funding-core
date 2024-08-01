@@ -11,4 +11,5 @@ data class QueryParams (
     val section: QuerySection,
     val status: QueryStatus,
     val date: Instant,
+    val applicationId: String
 )

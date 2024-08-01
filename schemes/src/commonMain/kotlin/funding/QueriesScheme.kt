@@ -9,7 +9,9 @@ import kronecker.LoadOptions
 interface QueriesScheme {
     fun create(applicationId:String, params: QueryParams): Later<QueryDto>
 
-    fun list(uid:String, options: LoadOptions = LoadOptions()): Later<List<QueryDto>>
+    fun list(options: LoadOptions = LoadOptions()): Later<List<QueryDto>>
+
+    fun listByApplication(applicationId: String, options: LoadOptions = LoadOptions()): Later<List<QueryDto>>
 
     fun load(uid:String): Later<QueryDto>
 
