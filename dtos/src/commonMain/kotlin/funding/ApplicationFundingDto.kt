@@ -6,9 +6,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ApplicationFundingDto(
-    val amount: Double?,
-    val type:Type?,
+    val amount: Double,
+    val type:Type,
     val breakdown: List<FundingBreakdownItem>,
-    val description: String?,
-    val attachment: AttachmentDto?
+    val description: String,
+    val attachment: AttachmentDto? = null
 )
