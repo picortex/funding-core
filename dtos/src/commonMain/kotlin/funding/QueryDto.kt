@@ -13,4 +13,6 @@ data class QueryDto(
     val section: QuerySection,
     val status: QueryStatus,
     val date: Instant,
+    val application: ApplicationDto,
+    val author: PersonalAccountDto
 )

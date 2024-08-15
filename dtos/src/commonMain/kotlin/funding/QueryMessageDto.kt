@@ -8,6 +8,15 @@ import krono.Instant
 
 @Serializable
 data class QueryMessageDto(
+    val uid:String,
     val content:String,
-    val date: Instant
-)
+    val date: Instant,
+    val from: From,
+    val sender: PersonalAccountDto
+) {
+    enum class From {
+        capital,monitor
+    }
+}
+
+
