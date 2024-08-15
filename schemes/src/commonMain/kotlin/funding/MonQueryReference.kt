@@ -29,7 +29,7 @@ class MonQueryReference(
             create = { "$base/$entity" },
             load = { uid -> "$base/$entity/$uid" },
             list = { "$base/$entity" },
-            listByApplication = {applicationId -> "$base/$entity/$applicationId"  },
+            listByApplication = {applicationId -> "$base/$entity/application/$applicationId"  },
             update = { "$base/$entity" },
             accept = { uid -> "$base/$entity/accept/$uid" },
             reject = { uid -> "$base/$entity/reject/$uid" },
