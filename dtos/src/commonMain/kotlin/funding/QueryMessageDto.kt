@@ -15,7 +15,10 @@ data class QueryMessageDto(
     val sender: PersonalAccountDto
 ) {
     enum class From {
-        capital,monitor
+        capital,monitor;
+
+        val isCapital get() = this == capital;
+        val isMonitor get() = this == capital;
     }
 }
 
