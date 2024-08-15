@@ -10,5 +10,6 @@ data class ApplicationFundingDto(
     val type:Type,
     val breakdown: List<FundingBreakdownItem>,
     val description: String,
-    val attachment: AttachmentDto? = null
+    val attachment: AttachmentDto? = null,
+    val letter: AttachmentDto? = null
 )

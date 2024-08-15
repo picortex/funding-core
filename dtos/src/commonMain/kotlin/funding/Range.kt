@@ -8,13 +8,13 @@ import kotlin.random.Random
 
 @Serializable
 data class Range(
-    val minimum: Int,
-    val maximum: Int,
+    val minimum: Double,
+    val maximum: Double,
 ) {
     companion object {
-        fun random(min: Int, max: Int): Range {
-            val mn = Random.nextInt(min, max)
-            val mx = Random.nextInt(mn, max)
+        fun random(min: Double, max: Double): Range {
+            val mn = Random.nextDouble(min, max)
+            val mx = Random.nextDouble(mn, max)
             return Range(mn, mx)
         }
     }

@@ -10,6 +10,8 @@ class FundingReference(
     val reject: (uid: String) -> String,
     val requireAction: (uid: String) -> String,
     val review: (uid: String) -> String,
+    val upload: (name: String) -> String,
+    val letter: (name: String) -> String,
 ) {
     companion object {
         fun messages(entity: String) = FundingReference(
@@ -22,6 +24,8 @@ class FundingReference(
             reject = { "Rejecting $entity" },
             requireAction = { "Requiring action $entity" },
             review = { "Reviewing $entity" },
+            upload = { "Uploading $entity" },
+            letter = { "Uploading letter $entity" },
         )
 
         // api/v1/applications
@@ -36,6 +40,8 @@ class FundingReference(
             reject = { uid -> "$base/$entity/reject/$uid" },
             requireAction = { uid -> "$base/$entity/requireAction/$uid" },
             review = { uid -> "$base/$entity/review/$uid" },
+            upload = { "$base/sme/document/$it" },
+            letter = { "$base/$entity/letter/$it" },
         )
     }
 }

@@ -5,6 +5,7 @@ package funding
 import kollections.List
 import kotlinx.JsExport
 import kotlinx.serialization.Serializable
+import krono.Instant
 
 @Serializable
 data class OpportunityParams(
@@ -15,5 +16,7 @@ data class OpportunityParams(
     val unfunded: Section,
     val funded: Section,
     val threshold: Threshold,
-    val types: List<Type>
+    val range: Range,
+    val types: List<Type>,
+    val deadline: Instant
 )
