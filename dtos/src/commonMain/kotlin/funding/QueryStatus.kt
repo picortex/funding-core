@@ -6,5 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 enum class QueryStatus {
-    Ongoing, Closed
+    Ongoing, Closed;
+
+    val isClosed get() = this == Closed
+    val isOngoing get() = this == Ongoing
 }

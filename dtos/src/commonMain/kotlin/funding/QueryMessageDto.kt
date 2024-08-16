@@ -18,7 +18,7 @@ data class QueryMessageDto(
         capital,monitor;
 
         val isCapital get() = this == capital;
-        val isMonitor get() = this == capital;
+        val isMonitor get() = this == monitor;
     }
 }
 
