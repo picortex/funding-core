@@ -13,7 +13,7 @@ interface QueryScheme {
 
     fun load(uid:String): Later<QueryDto>
 
-    fun sendMessage(uid:String, params: QueryMessageParams): Later<QueryMessageDto>
+
 
     fun messages(uid: String, options: LoadOptions = LoadOptions()): Later<List<QueryMessageDto>>
 }
