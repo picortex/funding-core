@@ -13,6 +13,8 @@ kotlin {
             dependencies {
                 api(projects.fundingDtos)
                 api(libs.koncurrent.later.core)
+                api(libs.raven.api)
+                api(libs.raven.markup.core)
             }
         }
 

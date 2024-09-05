@@ -5,6 +5,7 @@ class FundingReference(
     val load: (uid: String) -> String,
     val remove: (uid: String) -> String,
     val list: () -> String,
+    val listByFunder: (uid: String) -> String,
     val update: () -> String,
     val accept: (uid: String) -> String,
     val reject: (uid: String) -> String,
@@ -18,6 +19,7 @@ class FundingReference(
             create = { "Creating a new $entity" },
             load = { uid -> "Loading $entity with uid=$uid" },
             list = { "Fetching $entity list" },
+            listByFunder = { uid ->  "Fetching $entity list by funder $entity" },
             remove = { "Removing $entity with uid=$it" },
             update = { "Updating $entity" },
             accept = { "Accepting $entity" },
@@ -34,6 +36,7 @@ class FundingReference(
             load = { uid -> "$base/$entity/$uid" },
             remove = { uid -> "$base/$entity/$uid" },
             list = { "$base/$entity" },
+            listByFunder = { uid -> "$base/$entity/by/funder/$uid" },
             update = { "$base/$entity" },
 
             accept = { uid -> "$base/$entity/accept/$uid" },
