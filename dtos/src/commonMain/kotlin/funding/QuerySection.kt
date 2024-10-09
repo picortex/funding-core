@@ -7,11 +7,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 enum class QuerySection(val label:String) {
-    AdminInfo("Admin Info"),
-    LegalDocs("Legal Docs"),
+    AdminInfo("Administration Information"),
+    LegalDocs("Document Upload"),
+    BusinessReview("Business Review"),
     SwotAnalysis("SWOT Analysis"),
-    FinancialAnalysis("Financial Analysis"),
     ManagementGovernance("Management Governance"),
     BusinessPlan("Business Plan"),
-    FinancialStatements("Financial Statements")
+    FinancialAnalysis("Financial Analysis")
 }

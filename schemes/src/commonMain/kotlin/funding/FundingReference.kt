@@ -13,6 +13,7 @@ class FundingReference(
     val review: (uid: String) -> String,
     val upload: (name: String) -> String,
     val letter: (name: String) -> String,
+    val dashboard: () -> String,
 ) {
     companion object {
         fun messages(entity: String) = FundingReference(
@@ -28,6 +29,7 @@ class FundingReference(
             review = { "Reviewing $entity" },
             upload = { "Uploading $entity" },
             letter = { "Uploading letter $entity" },
+            dashboard = { "Loading dashboard" },
         )
 
         // api/v1/applications
@@ -45,6 +47,7 @@ class FundingReference(
             review = { uid -> "$base/$entity/review/$uid" },
             upload = { "$base/sme/document/$it" },
             letter = { "$base/$entity/letter/$it" },
+            dashboard = { "$base/dashboard" },
         )
     }
 }

@@ -9,5 +9,6 @@ data class ApplicationDto(
     val opportunity: Opportunity,
     val funding: ApplicationFundingDto,
     val business: SmeDto,
+    val portal: CapitalPortalDto,
     val status: ApplicationStatus = ApplicationStatus.Submitted,
 )
