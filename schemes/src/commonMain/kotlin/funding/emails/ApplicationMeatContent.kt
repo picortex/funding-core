@@ -1,5 +1,6 @@
 package sentinel.emails
 
+import funding.ApplicationDto
 import funding.params.RequireActionApplicationParams
 import identifier.Brand
 import raven.Body
@@ -14,11 +15,21 @@ internal fun ComponentScope<Body>.submittedMeatContent(brand: Brand, link: Strin
             """.trimIndent()
         )
     }
-//    container(center.padding(v = "1.5em")) {
-//        button(css.background(brand.color.background), href = link) {
-//            label(css.color(brand.color.foreground), "Verify Email")
-//        }
-//    }
+    p {
+        text("Thanks!")
+        br()
+        text("~ The ${brand.name} team")
+    }
+}
+
+internal fun ComponentScope<Body>.submittedToReviewerMeatContent(brand: Brand, link: String, application: ApplicationDto) {
+    p {
+        text(
+            """
+                ${application.business.admin?.business?.name} has submitted a funding request. Login to review application.
+            """.trimIndent()
+        )
+    }
     p {
         text("Thanks!")
         br()

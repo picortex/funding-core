@@ -11,4 +11,5 @@ data class Funder(
     val name: String,
     val email: String,
     val logo: String? = null,
+    val description: String? = null,
 )

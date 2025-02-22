@@ -1,5 +1,6 @@
 package funding.emails
 
+import funding.ApplicationDto
 import funding.params.RequireActionApplicationParams
 import identifier.Brand
 import raven.bodyMarkup
@@ -21,6 +22,20 @@ object ApplicationEmails {
     ) = bodyMarkup(css().font(family = "Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;")) {
         Barner(brand, label)
         this.submittedMeatContent(brand, greeting)
+        Footer(brand, "registered", year)
+    }
+
+    fun submittedToReviewer(
+        brand: Brand,
+        greeting: String,
+        label: String,
+        receptionist: String?,
+        link: String,
+        year: String,
+        appication: ApplicationDto
+    ) = bodyMarkup(css().font(family = "Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;")) {
+        Barner(brand, label)
+        this.submittedToReviewerMeatContent(brand, greeting, appication)
         Footer(brand, "registered", year)
     }
 

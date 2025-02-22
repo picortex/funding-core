@@ -1,5 +1,6 @@
 package funding.emails
 
+import funding.ApplicationDto
 import funding.params.RequireActionApplicationParams
 import kotlinx.coroutines.CoroutineScope
 import krono.Clock
@@ -16,6 +17,6 @@ class ApplicationTemplatedEmailOptions(
 ) {
     class Submitted(
         val applicant: TemplatedEmailOptions<Any?>,
-        val reviewer: TemplatedEmailOptions<Any?>,
+        val reviewer: TemplatedEmailOptions<ApplicationDto>,
     )
 }
