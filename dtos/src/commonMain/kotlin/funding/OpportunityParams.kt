@@ -18,5 +18,5 @@ data class OpportunityParams(
     val threshold: Threshold,
     val range: Range,
     val types: List<Type>,
-    val deadline: Instant
+    val deadline: Instant?
 )
